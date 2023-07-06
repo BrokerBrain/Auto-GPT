@@ -267,6 +267,7 @@ def scan_plugins(config: Config, debug: bool = False) -> List[AutoGPTPluginTempl
                     ):
                         plugin_name = a_module.__name__
                         plugin_configured = plugins_config.get(plugin_name) is not None
+                        print(plugins_config)
                         plugin_enabled = plugins_config.is_enabled(plugin_name)
 
                         if plugin_configured and plugin_enabled:
